@@ -11,5 +11,7 @@ public interface QueService {
     List<Que> get();
 
     Que getOne(Long id);
+
+    List<Que> getQuestionsOfQuiz(Long quizId);
     
 }

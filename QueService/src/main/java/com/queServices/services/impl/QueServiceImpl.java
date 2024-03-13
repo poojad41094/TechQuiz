@@ -32,5 +32,10 @@ public class QueServiceImpl implements QueService{
     public Que getOne(Long id) {
         return queRepo.findById(id).orElseThrow(()-> new RuntimeException("Question Not Found!"));
     }
+
+    @Override
+    public List<Que> getQuestionsOfQuiz(Long quizId) {
+        return queRepo.findByQuizId(quizId);
+    }
     
 }
